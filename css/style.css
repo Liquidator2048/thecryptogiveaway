@@ -1,0 +1,239 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    /*background-color: #4f4fef;*/
+    background-color: #000000;
+    color: white;
+}
+
+body {
+    background: url("../bg.svg");
+    background-repeat: repeat;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #d3d3d3
+}
+
+h1, h2, h3, h4, h5, p, a, li {
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.title-image {
+    max-height: 50vh;
+}
+
+.noise-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 800%;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.noise-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.noise {
+    position: absolute;
+    top: -500px;
+    right: -500px;
+    bottom: -500px;
+    left: -500px;
+    background: transparent url(../noise.png) 0 0;
+    background-size: 320px 320px;
+    opacity: .35;
+    animation: noise 1s steps(8, end) infinite both;
+}
+
+@keyframes noise {
+    0% {
+        transform: translateX(0px, 0px);
+    }
+    10% {
+        transform: translate(-100px, 100px);
+    }
+    20% {
+        transform: translate(150px, -100px);
+    }
+    30% {
+        transform: translate(-100px, 100px);
+    }
+    40% {
+        transform: translate(100px, -150px);
+    }
+    50% {
+        transform: translate(-100px, 200px);
+    }
+    60% {
+        transform: translate(-200px, -100px);
+    }
+    70% {
+        transform: translateY(50px, 100px);
+    }
+    80% {
+        transform: translate(100px, -150px);
+    }
+    90% {
+        transform: translate(0px, 200px);
+    }
+    100% {
+        transform: translate(-100px, 100px);
+    }
+}
+
+.container, #moon {
+    position: relative;
+    z-index: 99;
+}
+
+.container-first {
+
+    min-height: 100vh;
+    height: 100%;
+}
+
+.section {
+    min-height: 120vh;
+}
+
+.title {
+    font-family: 'Monoton', cursive;
+    font-size: 13vw;
+    color: #ffff00;
+}
+
+.text-container {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 30px
+}
+
+@media (orientation: landscape) {
+    .title {
+        font-size: 13vh;
+    }
+
+    .text-container {
+        font-size: 3vh;
+    }
+}
+
+
+.text-container {
+    font-size: 25px;
+}
+
+.discord-name {
+    display: flex;
+    padding: 10px;
+    background: rgba(54, 57, 63, 0.8); /*  #36393f*/
+    border-radius: 4px;
+
+    margin: 1%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .discord-name {
+        max-width: 100%;
+        flex: 0 0 100%;
+        font-size: 13px;
+    }
+}
+
+.discord-name img {
+    width: 30px;
+    height: 30px;
+}
+
+.discord-name p {
+    padding-left: 1em
+}
+
+.btn-moon, .btn-moon:hover, .btn-moon:active, .btn-moon:focus,
+.btn-moon:not(:disabled):not(.disabled).active,
+.btn-moon:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border-color: white;
+    text-decoration: none;
+    border-radius: 1px;
+    color: white;
+}
+
+.btn-moon:hover, .btn-moon:active, .btn-moon:focus,
+.btn-moon:not(:disabled):not(.disabled).active,
+.btn-moon:not(:disabled):not(.disabled):active {
+    font-weight: bold;
+}
+
+.fw {
+    width: 100%;
+    background-color: black;
+}
+
+#moon {
+    background-color: #186ec7;
+
+}
+
+#moon p, #moon h1, #moon h2, #moon h3, #moon h4, #moon h5, #moon a, #moon figcaption {
+    color: #e7f5ff;
+}
+
+#moon .block {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
+    margin-top: 2em;
+    font-size: 12px;
+}
+
+#moon .block.text-bigger {
+    font-size: 15px;
+}
+
+#moon figure, #moon figure img {
+    width: 100%;
+}
+
+#moon .popup {
+    max-width: 80%;
+    display: none;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    #moon .float {
+        position: relative;
+        right: 100%;
+        bottom: 27%;
+    }
+}
+
+#continue .card {
+    color: black;
+    width: 10em;
+}
+#continue .card a {
+    text-decoration: none;
+}
+
