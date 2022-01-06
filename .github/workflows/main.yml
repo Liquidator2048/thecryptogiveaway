@@ -24,4 +24,4 @@ jobs:
           IPFS_DEPLOY_PINATA__API_KEY: ${{ secrets.IPFS_DEPLOY_PINATA__API_KEY }}
           IPFS_DEPLOY_PINATA__SECRET_API_KEY: ${{ secrets.IPFS_DEPLOY_PINATA__SECRET_API_KEY }}
           VUE_APP_CLOUDFLARE_WORKER_URL: ${{ secrets.VUE_APP_CLOUDFLARE_WORKER_URL }}
-        run: ipfs-deploy -C -p infura -p pinata -d cloudflare ./dist
+        run: ipfs-deploy -C -p infura -p pinata -d cloudflare .
